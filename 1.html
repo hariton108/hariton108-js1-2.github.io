@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		function calcExp(base, exp) {
+
+			var base, exp;
+			base = prompt('Введите целое число', '');
+
+			if ((base != null) && ((base ^ 0) == base) && (base != NaN) && (base != '')) {
+				
+				exp = prompt('Введите степень (целое число)', '');
+
+				if ((exp != null) && ((exp ^ 0) == exp) && (exp != NaN) && (exp != '')) {
+					
+					var result = 1;
+
+					for (var i = 0; i < Math.abs(exp); i++) {
+						result *= base;	
+					}
+
+					if (exp >= 0) {
+						return console.log(result);
+					}
+
+					return console.log(1 / result);
+				}
+			}
+			alert('Попробуйте еще раз')
+		}
+		
+		calcExp();
+	</script>
+</body>
+</html>
